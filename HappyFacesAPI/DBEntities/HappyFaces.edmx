@@ -78,7 +78,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="HappyFacesEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="HappyFacesContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="Products" EntityType="Self.Product" />
           <AssociationSet Name="FK__Products__Catego__1273C1CD" Association="Self.FK__Products__Catego__1273C1CD">
@@ -91,7 +91,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="HappyFacesModelStoreContainer" CdmEntityContainer="HappyFacesEntities">
+        <EntityContainerMapping StorageEntityContainer="HappyFacesModelStoreContainer" CdmEntityContainer="HappyFacesContext">
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="HappyFacesModel.Category">
               <MappingFragment StoreEntitySet="Category">

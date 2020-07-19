@@ -13,10 +13,10 @@ namespace HappyFacesAPI.DBEntities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class HappyFacesEntities : DbContext
+    public partial class HappyFacesContext : DbContext
     {
-        public HappyFacesEntities()
-            : base("name=HappyFacesEntities")
+        public HappyFacesContext()
+            : base("name=HappyFacesContext")
         {
         }
     

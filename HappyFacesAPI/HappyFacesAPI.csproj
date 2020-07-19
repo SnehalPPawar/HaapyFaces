@@ -119,15 +119,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DBEntities\Product.Context.tt">
+    <Content Include="DBEntities\HappyFaces.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Product.edmx</DependentUpon>
-      <LastGenOutput>Product.Context.cs</LastGenOutput>
+      <DependentUpon>HappyFaces.edmx</DependentUpon>
+      <LastGenOutput>HappyFaces.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DBEntities\Product.tt">
+    <Content Include="DBEntities\HappyFaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Product.edmx</DependentUpon>
-      <LastGenOutput>Product1.cs</LastGenOutput>
+      <DependentUpon>HappyFaces.edmx</DependentUpon>
+      <LastGenOutput>HappyFaces.cs</LastGenOutput>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
@@ -136,43 +136,54 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HappyFacesController.cs" />
     <Compile Include="DBEntities\Category.cs">
-      <DependentUpon>Product.tt</DependentUpon>
+      <DependentUpon>HappyFaces.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBEntities\Product.Context.cs">
+    <Compile Include="DBEntities\HappyFaces.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Product.Context.tt</DependentUpon>
+      <DependentUpon>HappyFaces.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBEntities\HappyFaces.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HappyFaces.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBEntities\HappyFaces.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HappyFaces.edmx</DependentUpon>
     </Compile>
     <Compile Include="DBEntities\Product.cs">
-      <DependentUpon>Product.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBEntities\Product.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Product.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DBEntities\Product1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Product.tt</DependentUpon>
+      <DependentUpon>HappyFaces.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\HappyFacesRepository.cs" />
+    <Compile Include="Repository\ICategoryRepository.cs" />
+    <Compile Include="Repository\IHappyFacesRepository.cs" />
+    <Compile Include="Repository\IProductRepository.cs" />
+    <Compile Include="Repository\IUnitofWork.cs" />
+    <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="Repository\UnitofWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="DBEntities\Product.edmx">
+    <EntityDeploy Include="DBEntities\HappyFaces.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Product.Designer.cs</LastGenOutput>
+      <LastGenOutput>HappyFaces.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="DBEntities\Product.edmx.diagram">
-      <DependentUpon>Product.edmx</DependentUpon>
+    <Content Include="DBEntities\HappyFaces.edmx.diagram">
+      <DependentUpon>HappyFaces.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -183,8 +194,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
